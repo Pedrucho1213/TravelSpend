@@ -35,11 +35,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         binding.huaweiId.setOnClickListener(this)
-
-
     }
-
-
 
     override fun onClick(v: View?) {
         val authParams : AccountAuthParams = AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
