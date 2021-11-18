@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TravelSpend</string>
+    <string name="hometraveler">homeTraveler</string>
+    <string name="bienvenido_viajero">Bienvenido Viajero</string>
+    <string name="qui_res_empezar_una_nueva_aventura">¿Quiéres empezar una nueva aventura?</string>
+    <string name="bodyText">Estamos ansiosos de comenzar una nueva aventura contigo. Las mejores experiencas pueden estár a un click.</string>
+    <string name="newTravel">Crear un nuevo viaje</string>
 </resources>

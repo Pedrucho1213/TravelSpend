@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.travelspend"
@@ -16,7 +16,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
     buildFeatures{
@@ -55,15 +55,15 @@ android {
 dependencies {
 
     //noinspection GradleCompatible
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0'
-    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0-beta02'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.0-beta02'
     testImplementation 'junit:junit:'
     //noinspection GradleCompatible
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Huawei dependencias
     implementation 'com.huawei.hms:push:5.0.4.302'
@@ -76,5 +76,6 @@ dependencies {
     implementation 'com.huawei.hms:site:5.0.5.301'
     implementation 'com.huawei.agconnect:agconnect-core:1.5.2.300'
 
-
+    // Google Material
+    implementation 'com.google.android.material:material:1.5.0-beta01'
 }
