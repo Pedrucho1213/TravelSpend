@@ -5,4 +5,6 @@
     <string name="qui_res_empezar_una_nueva_aventura">¿Quiéres empezar una nueva aventura?</string>
     <string name="bodyText">Estamos ansiosos de comenzar una nueva aventura contigo. Las mejores experiencas pueden estár a un click.</string>
     <string name="newTravel">Crear un nuevo viaje</string>
+    <string name="nameApp">TravelSpendX</string>
+    <string name="appnameIntro">Inicia sesión para comenzar el viaje</string>
 </resources>

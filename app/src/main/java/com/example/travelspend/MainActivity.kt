@@ -1,11 +1,9 @@
 package com.example.travelspend
 
 import android.content.Intent
-import android.content.pm.PackageInfo
-import android.content.pm.PackageManager
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Base64
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -16,9 +14,7 @@ import com.huawei.hms.support.account.request.AccountAuthParams
 import com.huawei.hms.support.account.request.AccountAuthParamsHelper
 import com.huawei.hms.support.account.service.AccountAuthService
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.Exception
-import java.security.MessageDigest
-import java.security.NoSuchAlgorithmException
+
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -28,13 +24,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         const val TAG = "MainActivity"
     }
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        supportActionBar?.hide()
         binding.huaweiId.setOnClickListener(this)
     }
 
@@ -56,14 +52,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             if (authAccountTask.isSuccessful) {
                 // The sign-in is successful, and the user's ID information and ID token are obtained.
                 val authAccount = authAccountTask.result
-                txtToken.text = authAccount.displayName
                 // Obtain the ID type (0: HUAWEI ID; 1: AppTouch ID).
                 Toast.makeText(this, "Inició sesión", Toast.LENGTH_SHORT).show()
 
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
 
-                Log.i(TAG, "accountFlag:" + authAccount.accountFlag);
+                Log.i(TAG, "accountFlag:" + authAccount.accountFlag)
             } else {
                 Toast.makeText(this, "No inició sesión", Toast.LENGTH_SHORT).show()
 
