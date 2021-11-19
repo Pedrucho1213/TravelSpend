@@ -18,11 +18,12 @@
         android:textAlignment="center"
         android:textSize="34sp"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/nameV"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        tools:ignore="NotSibling" />
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -52,7 +53,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,7 +106,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/F_ini"
             android:layout_width="255dp"
-            android:layout_height="41dp"
+            android:layout_height="48dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="79dp"
@@ -121,12 +122,16 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/de"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="281dp"
         android:layout_height="176dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="59dp"
         android:hint="Descripcion breve"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="368dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fini">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/desc"
