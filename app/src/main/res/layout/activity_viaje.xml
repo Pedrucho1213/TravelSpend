@@ -28,23 +28,23 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nvi"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="286dp"
-        android:layout_height="72dp"
+        android:layout_height="94dp"
         android:layout_marginStart="62dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="63dp"
         android:hint="Nombre del viaje"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameV"
             android:layout_width="262dp"
             android:layout_height="47dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="79dp"
             android:layout_marginBottom="16dp"
             android:ems="10"
@@ -60,23 +60,23 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
-        android:layout_width="281dp"
-        android:layout_height="74dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="280dp"
+        android:layout_height="89dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="62dp"
         android:hint="Presupuesto inicial"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nvi"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:layout_constraintTop_toBottomOf="@+id/nvi">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/PresuIni"
             android:layout_width="253dp"
             android:layout_height="46dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="13dp"
             android:ems="10"
@@ -92,23 +92,23 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fini"
-        android:layout_width="278dp"
-        android:layout_height="66dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="273dp"
+        android:layout_height="87dp"
         android:layout_marginStart="71dp"
         android:layout_marginTop="19dp"
         android:layout_marginEnd="62dp"
         android:hint="Fecha inicial"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textField"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:layout_constraintTop_toBottomOf="@+id/textField">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/F_ini"
             android:layout_width="255dp"
             android:layout_height="48dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="79dp"
             android:layout_marginBottom="365dp"
             android:ems="10"
@@ -138,7 +138,7 @@
             android:layout_width="257dp"
             android:layout_height="55dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="85dp"
             android:ems="10"
             android:gravity="start|top"
