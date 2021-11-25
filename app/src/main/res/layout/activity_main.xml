@@ -11,7 +11,7 @@
 
     <com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
         android:id="@+id/huaweiId"
-        android:layout_width="258dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:gravity="center"
         android:padding="10dp"
