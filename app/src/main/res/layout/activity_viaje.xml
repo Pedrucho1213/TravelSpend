@@ -6,149 +6,205 @@
     android:layout_height="match_parent"
     tools:context=".ViajeActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="307dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="32dp"
-        android:text="Nuevo viaje"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible"
-        tools:ignore="NotSibling" />
+        app:layout_constraintVertical_bias="0.0" >
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nvi"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="286dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="63dp"
-        android:hint="Nombre del viaje"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameV"
-            android:layout_width="262dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="79dp"
-            android:layout_marginBottom="16dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="parent"
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backbutton"
+            android:elevation="10dp"
+            android:contentDescription="@string/backbutton"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="#51000000"
+            android:contentDescription="@string/startimgtravel"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cardcreate" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/wrongdelivery"
+                android:text="@string/nuevo_viaje"
+                android:textColor="@color/white"
+                android:textSize="60sp" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/CardView"
+        android:layout_marginTop="20dp"
+        >
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="280dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="62dp"
-        android:hint="Presupuesto inicial"
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nvi">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/PresuIni"
-            android:layout_width="253dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="13dp"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            android:text="0.0"
-            app:layout_constraintBottom_toTopOf="@+id/textView3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fini"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="273dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="62dp"
-        android:hint="Fecha inicial"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textField">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/F_ini"
-            android:layout_width="255dp"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="79dp"
-            android:layout_marginBottom="365dp"
-            android:ems="10"
-            android:inputType="date"
-            android:text="DD/MM/AAAA"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_margin="10dp"
+            android:hint="@string/nombre_del_viaje"
+            android:textColorHint="#546E7A"
+            tools:ignore="TextContrastCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/de"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="281dp"
-        android:layout_height="176dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="59dp"
-        android:hint="Descripcion breve"
+        android:id="@+id/textInputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fini">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/desc"
-            android:layout_width="257dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="85dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="@string/presupuesto_aproximado"
+            android:inputType="numberDecimal"
+            android:textColorHint="#546E7A"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:autofillHints="no"
+            android:ems="10"
+            android:hint="@string/fecha_de_inicio"
+            android:inputType="date"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="485dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+
+        <EditText
+            android:id="@+id/editTextDate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autofillHints="no"
+            android:ems="10"
+            android:hint="@string/fecha_final"
+
+            android:inputType="date"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        tools:layout_editor_absoluteX="37dp">
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:autofillHints="no"
             android:ems="10"
             android:gravity="start|top"
+            android:hint="@string/breve_descripcci_n"
             android:inputType="textMultiLine"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteY="470dp" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/textButton"
+        style="Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/registrar_viaje"
+        android:backgroundTint="#2196f3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

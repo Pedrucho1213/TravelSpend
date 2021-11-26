@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             if (authAccountTask.isSuccessful) {
                 // The sign-in is successful, and the user's ID information and ID token are obtained.
-                val authAccount = authAccountTask.result
+                //val authAccount = authAccountTask.result
                 // Obtain the ID type (0: HUAWEI ID; 1: AppTouch ID).
 
-                Toast.makeText(this, "$authAccount", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Inició sesión", Toast.LENGTH_LONG).show()
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             } else {

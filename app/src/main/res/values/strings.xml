@@ -9,4 +9,18 @@
     <string name="appnameIntro">Inicia sesión para comenzar el viaje</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nuevo_viaje">NUEVO VIAJE</string>
+    <string name="nombre_del_viaje">Nombre del viaje</string>
+    <string name="presupuesto_inicial">Presupuesto inicial</string>
+    <string name="_0_0">0.0</string>
+    <string name="fecha_inicial">Fecha inicial</string>
+    <string name="dd_mm_aaaa">DD/MM/AAAA</string>
+    <string name="descripcion_breve">Descripcion breve</string>
+    <string name="startimgtravel">StartImgTravel</string>
+    <string name="presupuesto_aproximado">Presupuesto aproximado</string>
+    <string name="breve_descripcci_n">Breve descripcción</string>
+    <string name="registrar_viaje">Registrar viaje</string>
+    <string name="fecha_final">Fecha final</string>
+    <string name="fecha_de_inicio">Fecha de inicio</string>
+    <string name="backbutton">BackButton</string>
 </resources>

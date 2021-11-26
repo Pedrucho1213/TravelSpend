@@ -61,7 +61,7 @@
                     android:textSize="15sp"
                     android:text="@string/bodyText"/>
             </LinearLayout>
-
+<!--
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
@@ -78,7 +78,7 @@
                     android:textAlignment="center"
                     android:textColor="#000000" />
 
-            </LinearLayout>
+            </LinearLayout>-->
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
