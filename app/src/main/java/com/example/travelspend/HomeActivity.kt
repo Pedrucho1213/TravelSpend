@@ -5,16 +5,27 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
+import kotlinx.android.synthetic.main.activity_home.*
 
 
 class HomeActivity : AppCompatActivity() {
 
-
+    fun ShowBottomSheetFragment() {
+        val mBottomSheetFragment = ModalBottomSheet()
+        mBottomSheetFragment.show(supportFragmentManager, "MY_BOTTOM_SHEET")
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        Toolbar.setOnClickListener() {
+            ShowBottomSheetFragment()
+        }
+
+
 
     }
+
 
    override fun onResume() {
         super.onResume()
