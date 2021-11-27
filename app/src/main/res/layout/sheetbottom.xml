@@ -11,37 +11,108 @@
         android:layout_height="wrap_content"
         android:paddingBottom="16dp">
 
+
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Title Bottom Sheet"
+            android:id="@+id/account"
+            android:layout_width="265dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:text="Usuario"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
 
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.727"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="State behavior"
+            android:id="@+id/tohome"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Inicio"
+
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.722"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/account" />
 
         <TextView
-            android:id="@+id/tvStateBehavior"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text=""
+            android:id="@+id/mytravels"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Mis viajes"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.722"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/tohome" />
+
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:text="Cerrar sesión"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.722"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mytravels" />
+
+        <ImageView
+            android:id="@+id/user"
+            android:layout_width="102dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/acount_circle"
+            app:layout_constraintBottom_toTopOf="@+id/home"
+            app:layout_constraintEnd_toStartOf="@+id/account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bookmark"
+            android:layout_width="34dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="51dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/bookmarks"
+            app:layout_constraintEnd_toStartOf="@+id/mytravels"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home" />
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="34dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="51dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/home"
+            app:layout_constraintEnd_toStartOf="@+id/tohome"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logut"
+            android:layout_width="34dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="51dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logout"
+            app:layout_constraintEnd_toStartOf="@+id/logout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookmark" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
