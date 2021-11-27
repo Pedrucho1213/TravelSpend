@@ -11,12 +11,10 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
 
-    fun ShowBottomSheetFragment() {
-        val mBottomSheetFragment = ModalBottomSheet()
-        mBottomSheetFragment.show(supportFragmentManager, "MY_BOTTOM_SHEET")
-    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_home)
         Toolbar.setOnClickListener() {
             ShowBottomSheetFragment()
@@ -26,7 +24,10 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-
+    fun ShowBottomSheetFragment() {
+        val mBottomSheetFragment = ModalBottomSheet()
+        mBottomSheetFragment.show(supportFragmentManager, "MY_BOTTOM_SHEET")
+    }
    override fun onResume() {
         super.onResume()
         showDialog()
@@ -35,7 +36,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun showDialog() {
         val builder = AlertDialog.Builder(this)
-             .setCancelable(false)
+             .setCancelable(true)
              .create()
          val inflater = this.layoutInflater
          val dialogView = inflater.inflate(R.layout.card_cmponent, null)
