@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
+import kotlinx.android.synthetic.main.activity_home.*
 
 
 class HomeActivity : AppCompatActivity() {
@@ -12,10 +14,20 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_home)
+        Toolbar.setOnClickListener() {
+            ShowBottomSheetFragment()
+        }
+
+
 
     }
 
+    fun ShowBottomSheetFragment() {
+        val mBottomSheetFragment = ModalBottomSheet()
+        mBottomSheetFragment.show(supportFragmentManager, "MY_BOTTOM_SHEET")
+    }
    override fun onResume() {
         super.onResume()
         showDialog()
@@ -24,7 +36,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun showDialog() {
         val builder = AlertDialog.Builder(this)
-             .setCancelable(false)
+             .setCancelable(true)
              .create()
          val inflater = this.layoutInflater
          val dialogView = inflater.inflate(R.layout.card_cmponent, null)
