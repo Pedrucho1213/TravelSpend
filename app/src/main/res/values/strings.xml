@@ -23,4 +23,13 @@
     <string name="fecha_final">Fecha final</string>
     <string name="fecha_de_inicio">Fecha de inicio</string>
     <string name="backbutton">BackButton</string>
+    <string name="nuevo_gasto">NUEVO GASTO</string>
+    <string name="registrar_gasto">Registrar gasto</string>
+    <string name="fecha_de_gasto">Fecha de gasto</string>
+    <string name="monto_gastado">Monto gastado</string>
+    <string name="moneda">Moneda</string>
+    <string name="modo_de_pago">Modo de pago</string>
+    <string name="fecha_del_gasto">Fecha del gasto</string>
+    <string name="concepto_del_gasto">Concepto del gasto</string>
+    <string name="breve_descripcci_n">Breve descripcción</string>
 </resources>

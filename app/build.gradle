@@ -27,7 +27,7 @@ android {
 
     signingConfigs {
         config {
-            storeFile file('C:\\Users\\David\\Desktop\\TravelSpend\\app\\key.jks')
+            storeFile file('/home/pedro/Documentos/Universidad/TravelSpend/app/key.jks')
             storePassword '123456'
             keyPassword '123456'
             keyAlias 'key0'

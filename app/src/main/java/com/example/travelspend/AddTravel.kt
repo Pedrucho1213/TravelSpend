@@ -5,7 +5,7 @@ import android.os.Bundle
 import com.example.travelspend.databinding.ActivityMainBinding
 import com.example.travelspend.databinding.ActivityViajeBinding
 
-class ViajeActivity : AppCompatActivity() {
+class AddTravel : AppCompatActivity() {
 private lateinit var startTravel: ActivityViajeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
