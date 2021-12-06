@@ -7,11 +7,31 @@
     tools:context=".HomeActivity">
 
 
-    <include
-        android:id="@+id/Toolbar"
-        layout="@layout/tooldbar"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        app:navigationIcon="@drawable/icono_menu"
+        app:title="TravelSpendX"
+        app:titleTextColor="@color/white"
+        android:fontFamily="@font/designer"
+        app:titleTextAppearance="@style/Toolbar.TitleText">
+    </androidx.appcompat.widget.Toolbar>
 
+<!--    <Button
+        android:id="@+id/consulta"
+        style="Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#2196f3"
+        android:text="Consultar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Toolbar" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
