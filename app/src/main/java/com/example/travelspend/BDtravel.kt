@@ -3,6 +3,7 @@ package com.example.travelspend
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 
 class DataBase (context : Context, name: String, factory: SQLiteDatabase.CursorFactory?, version: Int): SQLiteOpenHelper(context, name, factory, version){
@@ -13,4 +14,6 @@ class DataBase (context : Context, name: String, factory: SQLiteDatabase.CursorF
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("Drop table if exists viajes")
     }
+
+
 }

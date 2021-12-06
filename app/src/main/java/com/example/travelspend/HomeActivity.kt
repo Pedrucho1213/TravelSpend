@@ -3,60 +3,85 @@ package com.example.travelspend
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 import com.example.travelspend.databinding.ActivityHomeBinding
-import kotlinx.android.synthetic.main.activity_home.*
 
 
 class HomeActivity : AppCompatActivity() {
 
+    private lateinit var home: ActivityHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        setContentView(R.layout.activity_home)
-        Toolbar.setOnClickListener() {
+        home = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(home.root)
+
+        home.toolbar.setOnClickListener {
             ShowBottomSheetFragment()
-
         }
+    }
 
-        consulta.setOnClickListener {
-            consultar()
+    override fun onResume() {
+        super.onResume()
+
+        if (getTravel()){
+            showDialog()
         }
 
     }
-    private fun consultar(){
-        val intent2 = Intent(this, consultardatos::class.java)
-        startActivity(intent2)
+
+   private fun getTravel(): Boolean {
+       val admin = DataBase(this, "bd", null, 1)
+       val db = admin.writableDatabase
+       var data = false
+       if (db == null) {
+           Toast.makeText(this, "No db", Toast.LENGTH_SHORT).show()
+       } else {
+           val sql = "select * from viajes"
+           val row = db.rawQuery(sql, null)
+           row.moveToNext()
+           data = if (row.moveToFirst()) {
+               val dsc = row.getString(row.getColumnIndexOrThrow("nombre"))
+               Log.i(this.toString(), dsc)
+               false
+           } else {
+               Toast.makeText(this, "No existe registros", Toast.LENGTH_SHORT).show()
+               db.close()
+               row.close()
+               true
+           }
+       }
+       return data
     }
-    fun ShowBottomSheetFragment() {
+
+    private fun ShowBottomSheetFragment() {
         val mBottomSheetFragment = ModalBottomSheet()
         mBottomSheetFragment.show(supportFragmentManager, "MY_BOTTOM_SHEET")
     }
-   override fun onResume() {
-        super.onResume()
-        showDialog()
-    }
-
 
     private fun showDialog() {
         val builder = AlertDialog.Builder(this)
-             .setCancelable(true)
-             .create()
-         val inflater = this.layoutInflater
-         val dialogView = inflater.inflate(R.layout.card_cmponent, null)
-         builder.setView(dialogView)
-         builder.setButton(Dialog.BUTTON_POSITIVE, "Crear viaje") { dialog, _ ->
-             StartTravel()
-             dialog.dismiss()
-         }
+            .setCancelable(false)
+            .create()
+        val inflater = this.layoutInflater
+        val dialogView = inflater.inflate(R.layout.card_cmponent, null)
+        builder.setView(dialogView)
+        builder.setButton(Dialog.BUTTON_POSITIVE, "Crear viaje") { dialog, _ ->
+            StartTravel()
+            dialog.dismiss()
+        }
         builder.show()
     }
 
-    private fun StartTravel(){
+    private fun StartTravel() {
         val intent = Intent(this, ViajeActivity::class.java)
         startActivity(intent)
     }
+
+
 }
 
