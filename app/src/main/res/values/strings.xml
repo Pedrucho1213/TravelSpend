@@ -31,5 +31,11 @@
     <string name="modo_de_pago">Modo de pago</string>
     <string name="fecha_del_gasto">Fecha del gasto</string>
     <string name="concepto_del_gasto">Concepto del gasto</string>
-    <string name="breve_descripcci_n">Breve descripcción</string>
+    <string name="accountcircleimage">AccountCircleImage</string>
+    <string name="bienvenido_usuario">Bienvenido usuario</string>
+    <string name="pmpedrotorres_gmail_com">pmpedrotorres@gmail.com</string>
+    <string name="bookmarks">bookmarks</string>
+    <string name="mis_viajes">Mis viajes</string>
+    <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="submit">Submit</string>
 </resources>

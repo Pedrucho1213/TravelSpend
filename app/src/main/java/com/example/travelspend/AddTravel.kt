@@ -4,13 +4,13 @@ import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.travelspend.databinding.ActivityViajeBinding
+import com.example.travelspend.databinding.ActivityTravelBinding
 
-class ViajeActivity : AppCompatActivity() {
-    private lateinit var startTravel: ActivityViajeBinding
+class AddTravel : AppCompatActivity() {
+    private lateinit var startTravel: ActivityTravelBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startTravel = ActivityViajeBinding.inflate(layoutInflater)
+        startTravel = ActivityTravelBinding.inflate(layoutInflater)
 
         setContentView(startTravel.root)
         supportActionBar?.hide()

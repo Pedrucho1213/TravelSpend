@@ -14,6 +14,4 @@ class DataBase (context : Context, name: String, factory: SQLiteDatabase.CursorF
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("Drop table if exists viajes")
     }
-
-
 }

@@ -12,107 +12,137 @@
         android:paddingBottom="16dp">
 
 
-        <TextView
-            android:id="@+id/account"
-            android:layout_width="265dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="10dp"
-            android:text="Usuario"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerTopTitle"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="15dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.727"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tohome"
-            android:layout_width="220dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Inicio"
+            <ImageView
+                android:id="@+id/accountImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/acount_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/txtUserName"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/containerTopTitle"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/accountcircleimage"
+                />
+            <TextView
+                android:id="@+id/containerWelcome"
+                app:layout_constraintStart_toEndOf="@id/accountImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/txtUserName"
 
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bienvenido_usuario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+            <TextView
+                android:id="@+id/txtUserName"
+                app:layout_constraintStart_toEndOf="@id/accountImage"
+                app:layout_constraintTop_toBottomOf="@id/containerWelcome"
+                app:layout_constraintBottom_toBottomOf="@id/containerTopTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/pmpedrotorres_gmail_com"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/teal_700"
+            app:layout_constraintTop_toBottomOf="@id/containerTopTitle"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.722"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/account" />
+            app:layout_constraintBottom_toTopOf="@id/BodySheetContainer"/>
 
-        <TextView
-            android:id="@+id/mytravels"
-            android:layout_width="220dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Mis viajes"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/BodySheetContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.722"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tohome" />
+            app:layout_constraintTop_toBottomOf="@id/containerTopTitle">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/logout"
-            android:layout_width="220dp"
-            android:layout_height="40dp"
-            android:text="Cerrar sesión"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ContainerMyTravels"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.722"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mytravels" />
+                    <ImageView
+                        android:id="@+id/travelsLIst"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/bookmarks"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:contentDescription="@string/bookmarks" />
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mis_viajes"
+                        app:layout_constraintStart_toEndOf="@id/travelsLIst"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
-        <ImageView
-            android:id="@+id/user"
-            android:layout_width="102dp"
-            android:layout_height="72dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
-            android:src="@drawable/acount_circle"
-            app:layout_constraintBottom_toTopOf="@+id/home"
-            app:layout_constraintEnd_toStartOf="@+id/account"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/bookmark"
-            android:layout_width="34dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/bookmarks"
-            app:layout_constraintEnd_toStartOf="@+id/mytravels"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/CloseSession"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ContainerMyTravels">
 
-        <ImageView
-            android:id="@+id/home"
-            android:layout_width="34dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="80dp"
-            android:src="@drawable/home"
-            app:layout_constraintEnd_toStartOf="@+id/tohome"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/logout"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="@string/bookmarks"
+                        android:src="@drawable/logout"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/logut"
-            android:layout_width="34dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/logout"
-            app:layout_constraintEnd_toStartOf="@+id/logout"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bookmark" />
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cerrar_sesi_n"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/logout"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.core.widget.NestedScrollView>
