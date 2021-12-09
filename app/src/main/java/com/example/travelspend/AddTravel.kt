@@ -14,6 +14,7 @@ class AddTravel : AppCompatActivity() {
 
         setContentView(startTravel.root)
         supportActionBar?.hide()
+
         startTravel.backButton.setOnClickListener {
             onBackPressed()
         }
@@ -23,6 +24,11 @@ class AddTravel : AppCompatActivity() {
             onBackPressed()
         }
     }
+
+    private fun showDatePicker(){
+        
+    }
+
 
     private fun saveTravel() {
         val admin = DataBase(this, "bd", null, 1)
