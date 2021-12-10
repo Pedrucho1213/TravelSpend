@@ -48,6 +48,7 @@ class AddExpense : AppCompatActivity() {
 
         record.clear()
         Toast.makeText(this, "El gasto ha sido agregado", Toast.LENGTH_SHORT).show()
+        onBackPressed()
     }
 
 }
