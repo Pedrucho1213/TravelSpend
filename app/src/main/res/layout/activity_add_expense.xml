@@ -158,26 +158,26 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="371dp"
+        android:layout_height="148dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayout4"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout4">
+
         <EditText
             android:id="@+id/txtDescriptionDepense"
-            android:layout_margin="10dp"
             android:layout_width="345dp"
-            android:gravity="start|top"
             android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:autofillHints="no"
+            android:gravity="start|top"
             android:hint="@string/breve_descripcci_n"
-            android:inputType="textMultiLine"
-            android:autofillHints="no" />
+            android:inputType="textMultiLine" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/textButton"
+        android:id="@+id/addexpense"
         app:layout_constraintTop_toBottomOf="@id/textInputLayout6"
         style="Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="match_parent"

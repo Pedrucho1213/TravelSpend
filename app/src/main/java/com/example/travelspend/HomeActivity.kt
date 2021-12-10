@@ -34,6 +34,7 @@ class HomeActivity : AppCompatActivity() {
 
         sheetBotom.CloseSession.setOnClickListener { logout() }
 
+        home.textView3.setOnClickListener { getexpense() }
     }
 
     override fun onResume() {
@@ -97,6 +98,37 @@ class HomeActivity : AppCompatActivity() {
         val intent = Intent(this, AddTravel::class.java)
         startActivity(intent)
     }
+
+    private fun getexpense(): Boolean {
+        val admin = DataBase(this, "bd", null, 1)
+        val db = admin.writableDatabase
+        var data = false
+        if (db == null) {
+            Toast.makeText(this, "No db", Toast.LENGTH_SHORT).show()
+        } else {
+            val sql = "select * from gastos"
+            val row = db.rawQuery(sql, null)
+            row.moveToNext()
+            data = if (row.moveToFirst()) {
+                val cdo = row.getString(row.getColumnIndexOrThrow("codigo"))
+                val mto = row.getString(row.getColumnIndexOrThrow("monto"))
+                val mnd = row.getString(row.getColumnIndexOrThrow("moneda"))
+                val cpt = row.getString(row.getColumnIndexOrThrow("concepto"))
+                val fch = row.getString(row.getColumnIndexOrThrow("fecha"))
+                val mpg = row.getString(row.getColumnIndexOrThrow("mpago"))
+                val dsc = row.getString(row.getColumnIndexOrThrow("descrip"))
+                Log.i(this.toString(),"$cdo $mto $mnd $cpt $fch $mpg $dsc")
+                false
+            } else {
+                Toast.makeText(this, "No existe registros", Toast.LENGTH_SHORT).show()
+                db.close()
+                row.close()
+                true
+            }
+        }
+        return data
+        }
+
 
     private fun logout(){
         val authParams = HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM).createParams()
